@@ -1,25 +1,34 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { HTML5Backend } from "react-dnd-html5-backend";
+import { DndProvider } from "react-dnd";
+import "./App.css";
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+
+import Source from "./Source";
+import Target from "./Target";
+import Header from './components/Header'
+import Drawer from './components/Drawer'
+import Dashboard from './components/Dashboard'
+
+import "bootstrap/dist/css/bootstrap.min.css";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <DndProvider backend={HTML5Backend}>
+      <div>
+          <Header />
+        {/* <h3 className="text-center">React Drag and Drop</h3>
+        <div className="dnd-wrap">
+          <Source />
+          <Target />
+        </div> */}
+        <div className="layout-wrap">
+          <Drawer />
+          <Dashboard />
+        </div>
+        
+      </div>
+    </DndProvider>
   );
 }
 
