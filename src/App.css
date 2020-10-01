@@ -16,10 +16,14 @@
 
 .layout-wrap{
   display: flex;
+  padding: 8px;
+  background: #EDF2F7;
 }
 
 .dashboard-wrap{
   flex: 1;
-  background: #E5E5E5
+  /* background: #E5E5E5 */
+  background: #ffffff;
+  margin-left: 8px;
 
 }

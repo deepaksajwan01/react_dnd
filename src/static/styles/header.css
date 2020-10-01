@@ -22,6 +22,12 @@ justify-content: space-between;
   /* color: #353D45; */
 }
 
-.app-title span { 
+.app-title span  { 
   color: #828D9E;
+}
+
+ p.app-title span::first-letter {
+  font-size: 200%;
+  color: #8A2BE2;
+  
 }

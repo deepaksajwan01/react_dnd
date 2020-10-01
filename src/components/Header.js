@@ -1,21 +1,30 @@
-import React, { Component } from 'react'
-import '../static/styles/header.css'
+import React, { Component } from "react";
+import { useLocation } from "react-router";
+import "../static/styles/header.css";
 
-import logo from '../static/images/logo/ZEISS Logo.png'
-import user from '../static/images/icons/user/user.svg'
+import logo from "../static/images/logo/logo.svg";
+import user from "../static/images/icons/user/user.svg";
 
-export default class Header extends Component {
-  render() {
-    return (
-      <div className="header-wrap">
-        <div className="header-logo-wrap">
-         <img src={logo} alt=""/>
-         <p className="app-title">Research App <span className="current-component-title">Dashboard</span> </p>
-        </div>
-        <div className="user-icon-wrap">
-         <img src={user} alt="user-icon"/>
-        </div>
+const Header = (props) => {
+  const location = useLocation();
+  const str =
+    location.pathname.length <= 1
+      ? "Dashboard"
+      : location.pathname.slice(1, location.pathname.length);
+  const title = str.charAt(0).toUpperCase() + str.slice(1)
+  return (
+    <div className="header-wrap">
+      <div className="header-logo-wrap">
+        <img src={logo} alt="" />
+        <p className="app-title">
+          Research App <span className="current-component-title">{title}</span>{" "}
+        </p>
       </div>
-    )
-  }
-}
+      <div className="user-icon-wrap">
+        <img src={user} alt="user-icon" />
+      </div>
+    </div>
+  );
+};
+
+export default Header;
