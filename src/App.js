@@ -18,7 +18,13 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 function App() {
   return (
-    <Router>
+    <DndProvider backend={HTML5Backend}>
+      <div className="dnd-wrapper">
+        <Source />
+        <Target />
+      </div>
+    </DndProvider>
+    /*  <Router>
       <div>
         <Header />
         <div className="layout-wrap">
@@ -34,7 +40,7 @@ function App() {
           </Switch>
         </div>
       </div>
-    </Router>
+    </Router> */
   );
 }
 

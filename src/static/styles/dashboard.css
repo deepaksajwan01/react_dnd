@@ -1,4 +1,6 @@
-.dashboard-wrap{}
+.dashboard-wrap{
+  width: 1360px;
+}
 
 .dashboard-header{
   display: flex;
@@ -84,6 +86,6 @@
 }
 .dashboard-table-wrap table{
 
-  background: #ffffff;
+  /* background: #ffffff; */
 }
 

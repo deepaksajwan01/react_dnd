@@ -8,11 +8,13 @@
   position: relative;
   transition: 400ms ease all;
   width: 384px;
+  overflow: hidden;
 }
 
 .drawer-wrap .drawer-list {
   list-style: none;
   padding: 0;
+  width: 384px;
 }
 
 .drawer-btn {
@@ -20,11 +22,12 @@
 }
 
 .show-drawer {
-  /* left: 0; */
+
 }
 .hide-drawer {
   /* margin-left: -330px; */
-  width: 54px;
+  width: 56px;
+  
 }
 
 .ltem-wrap {
@@ -43,13 +46,14 @@
 }
 
 .hide-item {
-  position: relative;
-  left: -330px;
+  position: relative; 
+ left: -330px; 
   /* background: #0050F2; */
 }
 
 .item-hide {
-  flex-direction: row-reverse;
+  /* flex-direction: row-reverse; */
+  
 }
 
 .drawer-btn {

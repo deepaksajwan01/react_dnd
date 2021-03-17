@@ -1,9 +1,12 @@
 import React from "react";
 
+import Table from './Table'
+
 import "../static/styles/dashboard.css";
 import searchIcon from "../static/images/icons/search/search.svg";
 import uploadIcon from "../static/images/icons/upload/upload.svg";
 import downArrowIcon from "../static/images/icons/arrow/down/downArrow.svg";
+import { Tab } from "react-bootstrap";
 
 export default function Dashboard() {
   return (
@@ -32,16 +35,7 @@ export default function Dashboard() {
         </div>
       </div>
       <div className="dashboard-table-wrap">
-        <table>
-          <tr>
-            <th>File Name</th>
-            <th>Date Created</th>
-            <th>Device Type</th>
-            <th>Data Source</th>
-            <th>Case Status</th>
-            <th>Action</th>
-          </tr>
-        </table>
+        <Table />
       </div>
     </div>
   );

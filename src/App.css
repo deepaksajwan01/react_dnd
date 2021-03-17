@@ -27,3 +27,13 @@
   margin-left: 8px;
 
 }
+
+.dnd-target{
+  background-color: red;
+  height: 500px;
+  width: 500px;
+}
+
+.dnd-wrapper{
+  display: flex;
+}
